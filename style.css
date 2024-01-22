@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+#main {
+    min-height: 100vh;
+    background: linear-gradient(#D1A6FF, #6D88B9);
+    padding: 5% 10%;
+}
+
+h1 {
+    color: white;
+    margin: 10px 0;
+}
+
+button {
+    width: fit-content;
+    width: 150px;
+    height: 40px;
+    color: white;
+    background: linear-gradient(#862DE6, #6E23B6);
+    border: 1px solid #8400ff;
+    /* padding: 10px 20px; */
+    border-radius: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+button i {
+    font-size: 16px;
+}
+
+.task-area {
+    margin: 10px 0;
+    height: fit-content;
+    width: fit-content;
+    position: relative;
+}
+
+.task-area i {
+    position: absolute;
+    bottom: 10px;
+    right: 12px;
+    opacity: .5;
+    cursor: pointer;
+}
+
+textarea {
+    position: relative;
+    border-radius: 3px;
+    border: none;
+    outline: none;
+    padding: 10px 12px;
+    resize: none;
+    flex-basis: 33%;
+}
+
+textarea::after {
+    content: "\f1f8";
+    font-weight: 900;
+    font-family: "Font Awesome 6 Free";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.removed {
+    display: none;
+}
+
+.animation {
+    display: flex;
+    gap: 12px;
+}
+
+.animation div {
+    height: 12px;
+    width: 12px;
+    background-color: white;
+    border-radius: 50%;
+    animation: 1s ease-in-out infinite loding;
+    scale: 0;
+}
+
+.animation div:nth-child(2) {
+    animation-delay: .1s;
+}
+.animation div:nth-child(3) {
+    animation-delay: .2s;
+}
+
+@keyframes loding {
+    0%, 100% {
+        scale: 0;
+    }    
+    50% {
+        scale: 1;
+    }
+}
